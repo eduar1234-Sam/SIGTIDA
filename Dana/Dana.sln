@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.757
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaConexion", "CapaConexion\CapaConexion.csproj", "{F025E166-06CE-476F-AA46-459252BE57F3}"
 EndProject
@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaLogica", "CapaLogica\Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaIntegracion", "CapaIntegracion\CapaIntegracion.csproj", "{351BBBB7-0760-4F62-ABEB-DF44BF43ABA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresentacion", "CapaPresentacion\CapaPresentacion.csproj", "{77B6A0E6-915A-4BD5-8BE1-B34F28864030}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "capaPresentacionn", "capaPresentacionn\capaPresentacionn.csproj", "{85398B0E-8526-4F0A-9062-C7FEAC6A6658}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{351BBBB7-0760-4F62-ABEB-DF44BF43ABA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{351BBBB7-0760-4F62-ABEB-DF44BF43ABA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{351BBBB7-0760-4F62-ABEB-DF44BF43ABA3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{77B6A0E6-915A-4BD5-8BE1-B34F28864030}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{77B6A0E6-915A-4BD5-8BE1-B34F28864030}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{77B6A0E6-915A-4BD5-8BE1-B34F28864030}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{77B6A0E6-915A-4BD5-8BE1-B34F28864030}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85398B0E-8526-4F0A-9062-C7FEAC6A6658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85398B0E-8526-4F0A-9062-C7FEAC6A6658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85398B0E-8526-4F0A-9062-C7FEAC6A6658}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85398B0E-8526-4F0A-9062-C7FEAC6A6658}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
