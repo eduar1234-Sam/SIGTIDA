@@ -21,5 +21,15 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void Id_Cliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BuscarCliente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

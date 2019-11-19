@@ -48,6 +48,7 @@
             this.id_Cliente.Name = "id_Cliente";
             this.id_Cliente.Size = new System.Drawing.Size(100, 20);
             this.id_Cliente.TabIndex = 0;
+            this.id_Cliente.TextChanged += new System.EventHandler(this.Id_Cliente_TextChanged);
             // 
             // label1
             // 
@@ -82,6 +83,7 @@
             this.buscarCliente.TabIndex = 4;
             this.buscarCliente.Text = "Buscar";
             this.buscarCliente.UseVisualStyleBackColor = true;
+            this.buscarCliente.Click += new System.EventHandler(this.BuscarCliente_Click);
             // 
             // comboProducto
             // 

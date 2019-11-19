@@ -53,3 +53,7 @@ C:\Users\WIN10PRO\Documents\GitHub\SIGTIDA\Dana\CapaPresentacion\obj\Debug\CapaP
 C:\Users\WIN10PRO\Documents\GitHub\SIGTIDA\Dana\CapaPresentacion\obj\Debug\CapaPresentacion.Inventario.resources
 =======
 >>>>>>> 4d43ede177fd466ff54fbb14e4075a1a96f56063
+C:\Users\Eduardo\Documents\GitHub\InfoRed\SIGTIDA\Dana\CapaPresentacion\obj\Debug\CapaPresentacion.Clientes.resources
+C:\Users\Eduardo\Documents\GitHub\InfoRed\SIGTIDA\Dana\CapaPresentacion\obj\Debug\CapaPresentacion.Inventario.resources
+C:\Users\Eduardo\Documents\GitHub\InfoRed\SIGTIDA\Dana\CapaPresentacion\obj\Debug\CapaPresentacion.Productos.resources
+C:\Users\Eduardo\Documents\GitHub\InfoRed\SIGTIDA\Dana\CapaPresentacion\obj\Debug\CapaPresentacion.Ventas.resources
