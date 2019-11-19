@@ -16,5 +16,11 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            Ventas v = new Ventas();
+            v.Show();
+        }
     }
 }
