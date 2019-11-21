@@ -36,6 +36,9 @@ namespace Dana.CapaLogica.Servicio
             miComando.Parameters.Add("@nombre_Cliente", MySqlDbType.VarChar);
             miComando.Parameters["@nombre_Cliente"].Value = elCliente.Nombre_Cliente;
 
+            miComando.Parameters.Add("@cedulaCliente", MySqlDbType.VarChar);
+            miComando.Parameters["@cedulaCliente"].Value = elCliente.Cedula_Cliente;
+
             miComando.Parameters.Add("@apellido:Cliente", MySqlDbType.VarChar);
             miComando.Parameters["@apellido_Cliente"].Value = elCliente.Nombre_Cliente;
 
@@ -100,15 +103,15 @@ namespace Dana.CapaLogica.Servicio
             return respuesta;
         }
 
-        public DataSet ConsultarCliente(int id_Cliente)
+        public DataSet ConsultarCliente(string id_Cliente)
         {
             miComando = new MySqlCommand();
             Console.WriteLine("GestorCliente");
 
             miComando.CommandText = "ConsultarCliente";
 
-            miComando.Parameters.Add("@id_Cliente", MySqlDbType.VarChar);
-            miComando.Parameters["@id_Cliente"].Value = id_Cliente;
+            miComando.Parameters.Add("@ced", MySqlDbType.VarChar);
+            miComando.Parameters["@ced"].Value = id_Cliente;
 
             DataSet miDataSet = new DataSet();
             this.abrirConexion();

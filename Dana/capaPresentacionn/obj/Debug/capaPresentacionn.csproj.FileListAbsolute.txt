@@ -18,3 +18,4 @@ C:\Users\Eduardo\Documents\GitHub\InfoRed\SIGTIDA\Dana\capaPresentacionn\obj\Deb
 C:\Users\Eduardo\Documents\GitHub\InfoRed\SIGTIDA\Dana\capaPresentacionn\obj\Debug\capaPresentacionn.csproj.CopyComplete
 C:\Users\Eduardo\Documents\GitHub\InfoRed\SIGTIDA\Dana\capaPresentacionn\obj\Debug\capaPresentacionn.exe
 C:\Users\Eduardo\Documents\GitHub\InfoRed\SIGTIDA\Dana\capaPresentacionn\obj\Debug\capaPresentacionn.pdb
+C:\Users\Eduardo\Documents\GitHub\InfoRed\SIGTIDA\Dana\capaPresentacionn\obj\Debug\capaPresentacionn.Ventas.resources

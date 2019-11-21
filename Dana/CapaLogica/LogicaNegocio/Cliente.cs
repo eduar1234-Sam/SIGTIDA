@@ -11,6 +11,7 @@ namespace Dana.CapaLogica.LogicaNegocio
         #region Atributos
         protected int id_Cliente;
         protected string nombre_Cliente;
+        protected string cedula_Cliente;
         protected string apellido_Cliente;
         protected string telefono_Cliente;
         protected string email;
@@ -22,10 +23,11 @@ namespace Dana.CapaLogica.LogicaNegocio
 
         #region Constructores
 
-        public Cliente(string Pnombre_Cliente, string Papellido_Cliente, string Ptelefono_Cliente, string Pemail,
+        public Cliente(string Pnombre_Cliente, string ced, string Papellido_Cliente, string Ptelefono_Cliente, string Pemail,
                        string Pdireccion_Cliente, string Pestado_Cliente)
         {
             id_Cliente = 0;
+            cedula_Cliente = ced;
             nombre_Cliente = Pnombre_Cliente;
             apellido_Cliente = Papellido_Cliente;
             telefono_Cliente = Ptelefono_Cliente;
@@ -34,10 +36,11 @@ namespace Dana.CapaLogica.LogicaNegocio
             estado_Cliente = Pestado_Cliente;
         }
 
-        public Cliente(int Pid_Cliente, string Pnombre_Cliente, string Papellido_Cliente, string Ptelefono_Cliente, string Pemail,
+        public Cliente(int Pid_Cliente, string ced, string Pnombre_Cliente, string Papellido_Cliente, string Ptelefono_Cliente, string Pemail,
                        string Pdireccion_Cliente, string Pestado_Cliente)
         {
             id_Cliente = Pid_Cliente;
+            cedula_Cliente = ced;
             nombre_Cliente = Pnombre_Cliente;
             apellido_Cliente = Papellido_Cliente;
             telefono_Cliente = Ptelefono_Cliente;
@@ -51,6 +54,7 @@ namespace Dana.CapaLogica.LogicaNegocio
         #region Set´s y Get´s
         public int Id_Cliente { get => id_Cliente; set => id_Cliente = value; }
         public string Nombre_Cliente { get => nombre_Cliente; set => nombre_Cliente = value; }
+        public string Cedula_Cliente { get => cedula_Cliente; set => cedula_Cliente = value; }
         public string Apellido_Cliente { get => apellido_Cliente; set => apellido_Cliente = value; }
         public string Telefono_Cliente { get => telefono_Cliente; set => telefono_Cliente = value; }
         public string Email { get => email; set => email = value; }
