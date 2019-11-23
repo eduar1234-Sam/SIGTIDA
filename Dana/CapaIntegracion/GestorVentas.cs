@@ -28,9 +28,9 @@ namespace Dana.CapaIntegracion
 
         }
 
-        public string InsertarVenta(int Id_Cliente, DateTime Fecha_Venta)
+        public string InsertarVenta(int Id_Cliente)
         {
-            Venta nuevaVenta = new Venta(Id_Cliente, Fecha_Venta);
+            Venta nuevaVenta = new Venta(Id_Cliente);
 
             using (ServicioVenta laVenta = new ServicioVenta())
                 return laVenta.ingresarVenta(nuevaVenta);

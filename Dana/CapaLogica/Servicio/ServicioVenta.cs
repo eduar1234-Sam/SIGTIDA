@@ -34,8 +34,8 @@ namespace Dana.CapaLogica.Servicio
 
             miComando.CommandText = "IngresarVenta";
 
-            miComando.Parameters.Add("@id_Producto", MySqlDbType.Int32);
-            miComando.Parameters["@id_Producto"].Value = laVenta.Id_Producto;
+            miComando.Parameters.Add("@idC", MySqlDbType.Int32);
+            miComando.Parameters["@idC"].Value = laVenta.Id_Cliente;
 
            
 

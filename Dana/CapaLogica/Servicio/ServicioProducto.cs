@@ -90,19 +90,19 @@ namespace Dana.CapaLogica.Servicio
             return respuesta;
         }
 
-        public DataSet listarProducto()
+        public DataTable listarProducto()
         {
             miComando = new MySqlCommand();
             Console.WriteLine("GestorProducto");
 
-            miComando.CommandText = "listarProducto";
+           // miComando.CommandText = "listarProducto";
 
             
 
-            DataSet miDataSet = new DataSet();
+            DataTable miDataSet = new DataTable();
             this.abrirConexion();
 
-            miDataSet = this.seleccionarInformacion(miComando);
+            miDataSet = this.seleccionarIn("listarProducto");
             this.cerrarConexion();
 
             return miDataSet;

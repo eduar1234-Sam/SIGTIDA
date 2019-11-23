@@ -109,5 +109,18 @@ namespace Dana.CapaConexion
 
             return miDataSet;
         }
+
+        protected DataTable seleccionarIn(string sentencia)
+        {
+            DataTable miDataSet = new DataTable();
+            MySqlCommand miSqlCommand = conexion.CreateCommand();
+
+            miSqlCommand.CommandText = sentencia;
+            MySqlDataAdapter miSqlDataAdapter = new MySqlDataAdapter();
+            miSqlDataAdapter.SelectCommand = miSqlCommand;
+            miSqlDataAdapter.Fill(miDataSet);
+
+            return miDataSet;
+        }
     }
 }

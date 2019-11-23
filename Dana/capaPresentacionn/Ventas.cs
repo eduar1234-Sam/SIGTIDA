@@ -39,22 +39,26 @@ namespace capaPresentacionn
 
             this.apellidoCliente.Text= datosResultado["apellido_Cliente"].ToString();
 
+            generarVenta(int.Parse( datosResultado["id_Cliente"].ToString()));
+
 
 
 
         }
+
+        public void generarVenta(int id)
+        {
+            GestorVentas v = new GestorVentas();
+            v.InsertarVenta(id);
+
+            MessageBox.Show("Generando Venta.");
+        }
         public void cargarGridProducto()
         {
             GestorProductos prod = new GestorProductos();
-           // DataSet c;
-            //DataRow datosResultado;
-            //c = prod.listarProducto();
-            //datosResultado = c.Tables[0].Rows[0];
-
-
-            comboProducto.DataSource = prod.listarProducto() ;
+           comboProducto.DataSource = prod.listarProducto() ;
             comboProducto.DisplayMember = "nombre_Producto";
-           //comboProducto.ValueMember = "id_Producto";
+           comboProducto.ValueMember = "id_Producto";
         }
         
 
