@@ -28,6 +28,7 @@ namespace capaPresentacionn
             DataSet c;
             c = cl.ConsultarCliente("1");
 
+
             nombreCliente.Text = c.ToString();
 
             
