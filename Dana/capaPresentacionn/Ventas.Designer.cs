@@ -120,6 +120,7 @@
             this.agregarProducto.TabIndex = 8;
             this.agregarProducto.Text = "Agregar";
             this.agregarProducto.UseVisualStyleBackColor = true;
+            this.agregarProducto.Click += new System.EventHandler(this.AgregarProducto_Click);
             // 
             // dataGridView1
             // 
@@ -128,6 +129,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(776, 222);
             this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // facturarCompra
             // 

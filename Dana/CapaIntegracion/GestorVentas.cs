@@ -36,5 +36,19 @@ namespace Dana.CapaIntegracion
                 return laVenta.ingresarVenta(nuevaVenta);
         }
 
+        public DataSet ultimaVenta()
+        {
+            using (ServicioVenta comp = new ServicioVenta())
+            {
+
+                return comp.ultimaVenta();
+
+
+            }
+
+        }
+
+
+
     }
 }

@@ -51,5 +51,23 @@ namespace Dana.CapaLogica.Servicio
 
             return respuesta;
         }
+
+        public DataSet ultimaVenta()
+        {
+            miComando = new MySqlCommand();
+            Console.WriteLine("GestorVenta");
+
+            miComando.CommandText = "ultimaVenta";
+
+           
+
+            DataSet miDataSet = new DataSet();
+            this.abrirConexion();
+
+            miDataSet = this.seleccionarInformacion(miComando);
+            this.cerrarConexion();
+
+            return miDataSet;
+        }
     }
 }

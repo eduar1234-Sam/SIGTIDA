@@ -13,7 +13,7 @@ namespace capaPresentacionn
 {
     public partial class Ventas : Form
     {
-       
+        public int idV; 
 
         public Ventas()
         {
@@ -52,14 +52,37 @@ namespace capaPresentacionn
             v.InsertarVenta(id);
 
             MessageBox.Show("Generando Venta.");
+
+            DataSet c;
+            c = v.ultimaVenta();
+            DataRow datosResultado;
+            datosResultado = c.Tables[0].Rows[0];
+            idV = int.Parse(datosResultado["r"].ToString());
+
+
         }
         public void cargarGridProducto()
         {
-            GestorProductos prod = new GestorProductos();
-           comboProducto.DataSource = prod.listarProducto() ;
+
+            GestorProductos p = new GestorProductos();
+
+            comboProducto.DataSource = p.listarProducto();
             comboProducto.DisplayMember = "nombre_Producto";
-           comboProducto.ValueMember = "id_Producto";
+            comboProducto.ValueMember = "id_Producto";
+            
+
+          
         }
+
+        public void cargaDetalle(int id)
+        {
+            GestorDetalles d = new GestorDetalles();
+            dataGridView1.DataSource = d.cargarDetalle(id);
+
+
+        }
+
+      
         
 
         private void Ventas_Load(object sender, EventArgs e)
@@ -85,6 +108,16 @@ namespace capaPresentacionn
         private void ComboProducto_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void AgregarProducto_Click(object sender, EventArgs e)
+        {
+            cargaDetalle(idV);
         }
     }
 }
