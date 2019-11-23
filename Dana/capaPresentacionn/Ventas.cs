@@ -45,21 +45,16 @@ namespace capaPresentacionn
         }
         public void cargarGridProducto()
         {
-            GestorProductos cl = new GestorProductos();
-            DataSet c;
-            c = cl.listarProducto();
-            DataRow datosResultado;
-            datosResultado = c.Tables[0].Rows[0];
-
-
-
-
-            this.nombreCliente.Text = datosResultado["nombre_Producto"].ToString();
-
-
             GestorProductos prod = new GestorProductos();
-            comboProducto.DataSource = prod.listarProducto();
-            comboProducto.DisplayMember = "genero_Producto".ToString();
+           // DataSet c;
+            //DataRow datosResultado;
+            //c = prod.listarProducto();
+            //datosResultado = c.Tables[0].Rows[0];
+
+
+            comboProducto.DataSource = prod.listarProducto() ;
+            comboProducto.DisplayMember = "nombre_Producto";
+           //comboProducto.ValueMember = "id_Producto";
         }
         
 
