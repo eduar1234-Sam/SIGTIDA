@@ -46,5 +46,17 @@ namespace Dana.CapaIntegracion
                 return elProducto.modificarProducto(cambiaProducto);
         }
 
+        public DataSet listarProducto()
+        {
+            using (ServicioProducto prod = new ServicioProducto())
+            {
+
+                return prod.listarProducto();
+
+
+            }
+
+        }
+
     }
 }

@@ -13,11 +13,13 @@ namespace capaPresentacionn
 {
     public partial class Ventas : Form
     {
-        private object row;
+       
 
         public Ventas()
         {
             InitializeComponent();
+
+            cargarGridProducto();
         }
 
         public  void llenarText()
@@ -27,14 +29,37 @@ namespace capaPresentacionn
             GestorClientes cl = new GestorClientes();
             DataSet c;
             c = cl.ConsultarCliente("1");
+            DataRow datosResultado;
+            datosResultado = c.Tables[0].Rows[0];
 
 
-            nombreCliente.Text = c.ToString();
 
-            
 
-            
-            
+            this.nombreCliente.Text = datosResultado["nombre_Cliete"].ToString(); 
+
+            this.apellidoCliente.Text= datosResultado["apellido_Cliente"].ToString();
+
+
+
+
+        }
+        public void cargarGridProducto()
+        {
+            GestorProductos cl = new GestorProductos();
+            DataSet c;
+            c = cl.listarProducto();
+            DataRow datosResultado;
+            datosResultado = c.Tables[0].Rows[0];
+
+
+
+
+            this.nombreCliente.Text = datosResultado["nombre_Producto"].ToString();
+
+
+            GestorProductos prod = new GestorProductos();
+            comboProducto.DataSource = prod.listarProducto();
+            comboProducto.DisplayMember = "genero_Producto".ToString();
         }
         
 
@@ -56,6 +81,11 @@ namespace capaPresentacionn
         private void BuscarProducto_Click(object sender, EventArgs e)
         {
             llenarText();
+        }
+
+        private void ComboProducto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -84,6 +84,7 @@
             this.comboProducto.Size = new System.Drawing.Size(121, 21);
             this.comboProducto.TabIndex = 4;
             this.comboProducto.Text = "Productos";
+            this.comboProducto.SelectedIndexChanged += new System.EventHandler(this.ComboProducto_SelectedIndexChanged);
             // 
             // buscarProducto
             // 
