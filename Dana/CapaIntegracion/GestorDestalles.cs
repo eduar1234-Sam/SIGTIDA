@@ -28,12 +28,34 @@ namespace Dana.CapaIntegracion
 
         }
 
-        public DataSet cargarDetalle(int id)
+        public string ingresarDetalle(int idP, int idV, int cant)
+        {
+
+            Detalle nuevoProducto = new Detalle(idP, idV, cant);
+
+            using (ServicioDetalle elProducto = new ServicioDetalle())
+                return elProducto.ingresarDetalle(nuevoProducto);
+
+        }
+
+       public DataTable cargarDetalle(int id)
+       {
+            using (ServicioDetalle comp = new ServicioDetalle())
+           {
+
+              return comp.CargarDetalle(id);
+
+
+           }
+
+        }
+
+        public DataTable cargarTotal()
         {
             using (ServicioDetalle comp = new ServicioDetalle())
             {
 
-                return comp.CargarDetalle(id);
+                return comp.CargaTotal();
 
 
             }

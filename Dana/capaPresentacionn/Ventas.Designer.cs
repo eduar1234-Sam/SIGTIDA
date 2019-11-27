@@ -102,6 +102,7 @@
             this.cantidadProducto.Name = "cantidadProducto";
             this.cantidadProducto.Size = new System.Drawing.Size(21, 20);
             this.cantidadProducto.TabIndex = 6;
+            this.cantidadProducto.TextChanged += new System.EventHandler(this.CantidadProducto_TextChanged);
             // 
             // label2
             // 
@@ -127,7 +128,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 145);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 222);
+            this.dataGridView1.Size = new System.Drawing.Size(369, 222);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
@@ -139,6 +140,7 @@
             this.facturarCompra.TabIndex = 10;
             this.facturarCompra.Text = "Facturar";
             this.facturarCompra.UseVisualStyleBackColor = true;
+            this.facturarCompra.Click += new System.EventHandler(this.FacturarCompra_Click);
             // 
             // Ventas
             // 

@@ -10,12 +10,12 @@ using MySql.Data.MySqlClient;
 
 namespace Dana.CapaLogica.Servicio
 {
-   public class ServicioDetalle: servicio , IDisposable
+    public class ServicioDetalle : servicio, IDisposable
     {
         MySqlCommand miComando;
         private string respuesta;
 
-       
+
 
         public ServicioDetalle()
         {
@@ -37,10 +37,10 @@ namespace Dana.CapaLogica.Servicio
             miComando.Parameters.Add("@idP", MySqlDbType.Int32);
             miComando.Parameters["@idP"].Value = elDetalle.Id_Producto;
 
-            miComando.Parameters.Add("@idV", MySqlDbType.VarChar);
+            miComando.Parameters.Add("@idV", MySqlDbType.Int32);
             miComando.Parameters["@idV"].Value = elDetalle.Id_Venta;
 
-            miComando.Parameters.Add("@cant", MySqlDbType.VarChar);
+            miComando.Parameters.Add("@cant", MySqlDbType.Int32);
             miComando.Parameters["@cant"].Value = elDetalle.Cantidad_Producto;
 
 
@@ -56,25 +56,49 @@ namespace Dana.CapaLogica.Servicio
             return respuesta;
         }
 
-        public DataSet CargarDetalle(int id_Venta)
+        public DataTable CargarDetalle(int id_Venta)
         {
             miComando = new MySqlCommand();
             Console.WriteLine("GestorDetalle");
 
-            miComando.CommandText = "cargarDetalleFactura";
+            // miComando.CommandText = "cargarDetalleFactura";
 
-            miComando.Parameters.Add("@id_Ve", MySqlDbType.Int32);
-            miComando.Parameters["@id_Ve"].Value = id_Venta;
+            //// miComando.Parameters.Add("@id_Ve", MySqlDbType.Int32);
+            // miComando.Parameters["@id_Ve"].Value = id_Venta;
 
-            DataSet miDataSet = new DataSet();
+            DataTable miDataSet = new DataTable();
             this.abrirConexion();
 
-            miDataSet = this.seleccionarInformacion(miComando);
+            miDataSet = this.seleccionarIn("cargarDetalleFactura");
             this.cerrarConexion();
 
             return miDataSet;
+
+
+
         }
 
+        public DataTable CargaTotal()
+        {
+            miComando = new MySqlCommand();
+            Console.WriteLine("GestorDetalle");
+
+            // miComando.CommandText = "cargarDetalleFactura";
+
+            //// miComando.Parameters.Add("@id_Ve", MySqlDbType.Int32);
+            // miComando.Parameters["@id_Ve"].Value = id_Venta;
+
+            DataTable miDataSet = new DataTable();
+            this.abrirConexion();
+
+            miDataSet = this.seleccionarIn("cargarTotalFactura");
+            this.cerrarConexion();
+
+            return miDataSet;
+
+
+
+        }
 
     }
 }

@@ -26,6 +26,14 @@ namespace Dana.CapaLogica.LogicaNegocio
             cantidad_Producto = Pcantidad_Producto;
             precio_Detalle = Pprecio_Detalle;
         }
+        public Detalle(int Pid_Producto, int Pid_Venta, int cant)
+        {
+            id_Detalle = 0;
+            id_Producto = Pid_Producto;
+            id_Venta = Pid_Venta;
+            cantidad_Producto = cant;
+            
+        }
 
         public Detalle(int Pid_Detalle, int Pid_Producto, int Pid_Venta, int Pcantidad_Producto, double Pprecio_Detalle)
         {

@@ -13,7 +13,11 @@ namespace capaPresentacionn
 {
     public partial class Ventas : Form
     {
-        public int idV; 
+        public int idV;
+        public int idP;
+        public int cant=0;
+
+        public double Total=0; 
 
         public Ventas()
         {
@@ -68,17 +72,58 @@ namespace capaPresentacionn
 
             comboProducto.DataSource = p.listarProducto();
             comboProducto.DisplayMember = "nombre_Producto";
-            comboProducto.ValueMember = "id_Producto";
-            
+           comboProducto.ValueMember = "id_Producto";
+           
 
-          
+
+
+
+
+        }
+
+        public void cargarTotal()
+        {
+            GestorDetalles d = new GestorDetalles();
+            DataTable da;
+            da = d.cargarTotal();
+            DataRow p;
+            p = da.Rows[0];
+
+            MessageBox.Show("Total a pagar: "+Convert.ToString(p["total"]));
+
+
         }
 
         public void cargaDetalle(int id)
         {
-            GestorDetalles d = new GestorDetalles();
-            dataGridView1.DataSource = d.cargarDetalle(id);
 
+            using (GestorDetalles d = new GestorDetalles())
+            {
+                dataGridView1.DataSource = d.cargarDetalle(1);
+                dataGridView1.Columns["cantidad_Producto"].HeaderText = "Cantidad";
+                dataGridView1.Columns["nombre_Producto"].HeaderText = "Producto";
+                dataGridView1.Columns["precio_Detalle"].HeaderText = "Precio";
+
+
+
+
+            }
+
+
+            
+
+
+
+           
+
+
+
+        }
+
+        public void agregarDetalle(int idP, int idV, int inC)
+        {
+            GestorDetalles d = new GestorDetalles();
+            d.ingresarDetalle(idP, idV, inC);
 
         }
 
@@ -115,9 +160,29 @@ namespace capaPresentacionn
 
         }
 
+
+
         private void AgregarProducto_Click(object sender, EventArgs e)
         {
+            cant = int.Parse(cantidadProducto.Text);
+            idP = int.Parse(comboProducto.SelectedValue.ToString());
+            agregarDetalle(idP, idV, cant );
             cargaDetalle(idV);
+            MessageBox.Show("Producto agregado: "+idP.ToString());
+            
+
+
+
+        }
+
+        private void CantidadProducto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FacturarCompra_Click(object sender, EventArgs e)
+        {
+            cargarTotal();
         }
     }
 }
