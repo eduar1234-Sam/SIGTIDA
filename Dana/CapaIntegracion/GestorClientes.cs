@@ -28,21 +28,31 @@ namespace Dana.CapaIntegracion
 
         }
 
-        public string InsertarCliente(string nombre , string ced , string ap , string tel, string mail,
-            string dir, string est )
+        public string InsertarCliente(string nombre, string ced, string ap, string tel, string mail,
+              string dir, string est)
         {
             Cliente nuevoInventario = new Cliente(nombre, ced, ap, tel, mail, dir, est);
 
             using (ServicioCliente elInventario = new ServicioCliente())
                 return elInventario.ingresarCliente(nuevoInventario);
         }
-
         public DataSet ConsultarCliente(string id)
         {
             using (ServicioCliente comp = new ServicioCliente())
             {
 
                 return comp.ConsultarCliente(id);
+
+
+            }
+
+        }
+        public DataTable listarCliente()
+        {
+            using (ServicioCliente comp = new ServicioCliente())
+            {
+
+                return comp.listarCliente();
 
 
             }

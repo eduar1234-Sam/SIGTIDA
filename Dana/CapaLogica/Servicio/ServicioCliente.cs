@@ -33,23 +33,23 @@ namespace Dana.CapaLogica.Servicio
 
             miComando.CommandText = "IngresarCliente";
 
-            miComando.Parameters.Add("@nombre_Cliente", MySqlDbType.VarChar);
-            miComando.Parameters["@nombre_Cliente"].Value = elCliente.Nombre_Cliente;
+            miComando.Parameters.Add("@nom", MySqlDbType.VarChar);
+            miComando.Parameters["@nom"].Value = elCliente.Nombre_Cliente;
 
-            miComando.Parameters.Add("@cedulaCliente", MySqlDbType.VarChar);
-            miComando.Parameters["@cedulaCliente"].Value = elCliente.Cedula_Cliente;
+            miComando.Parameters.Add("@ced", MySqlDbType.VarChar);
+            miComando.Parameters["@ced"].Value = elCliente.Cedula_Cliente;
 
-            miComando.Parameters.Add("@apellido:Cliente", MySqlDbType.VarChar);
-            miComando.Parameters["@apellido_Cliente"].Value = elCliente.Nombre_Cliente;
+            miComando.Parameters.Add("@ap", MySqlDbType.VarChar);
+            miComando.Parameters["@ap"].Value = elCliente.Apellido_Cliente;
 
-            miComando.Parameters.Add("@telefono_Cliente", MySqlDbType.VarChar);
-            miComando.Parameters["@telefono_Cliente"].Value = elCliente.Telefono_Cliente;
+            miComando.Parameters.Add("@tel", MySqlDbType.VarChar);
+            miComando.Parameters["@tel"].Value = elCliente.Telefono_Cliente;
 
-            miComando.Parameters.Add("@email", MySqlDbType.VarChar);
-            miComando.Parameters["@email"].Value = elCliente.Email;
+            miComando.Parameters.Add("@mail", MySqlDbType.VarChar);
+            miComando.Parameters["@mail"].Value = elCliente.Email;
 
-            miComando.Parameters.Add("@direccion_Cliente", MySqlDbType.VarChar);
-            miComando.Parameters["@direccion_Cliente"].Value = elCliente.Direccion_Cliente;
+            miComando.Parameters.Add("@dir", MySqlDbType.VarChar);
+            miComando.Parameters["@dir"].Value = elCliente.Direccion_Cliente;
 
             miComando.Parameters.Add("@estado_Cliente", MySqlDbType.VarChar);
             miComando.Parameters["@estado_Cliente"].Value = elCliente.Estado_Cliente;
@@ -121,5 +121,25 @@ namespace Dana.CapaLogica.Servicio
 
             return miDataSet;
         }
+
+        public DataTable listarCliente()
+        {
+            miComando = new MySqlCommand();
+            Console.WriteLine("GestorCliente");
+
+            //miComando.CommandText = "listarCliente";
+
+            //miComando.Parameters.Add("@ced", MySqlDbType.VarChar);
+            //miComando.Parameters["@ced"].Value = id_Cliente;
+
+            DataTable miDataTable = new DataTable();
+            this.abrirConexion();
+
+            miDataTable = this.seleccionarIn("listarCliente");
+            this.cerrarConexion();
+
+            return miDataTable;
+        }
+
     }
 }

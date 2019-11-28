@@ -32,7 +32,7 @@ namespace capaPresentacionn
 
             GestorClientes cl = new GestorClientes();
             DataSet c;
-            c = cl.ConsultarCliente("1");
+            c = cl.ConsultarCliente(textBox1.Text);
             DataRow datosResultado;
             datosResultado = c.Tables[0].Rows[0];
 
@@ -183,6 +183,13 @@ namespace capaPresentacionn
         private void FacturarCompra_Click(object sender, EventArgs e)
         {
             cargarTotal();
+        }
+
+        private void Estadisticas_Click(object sender, EventArgs e)
+        {
+           
+            Graficos g = new Graficos();
+            g.Show();
         }
     }
 }

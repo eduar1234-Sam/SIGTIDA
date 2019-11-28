@@ -48,6 +48,75 @@ namespace Dana.CapaIntegracion
 
         }
 
+        public DataTable cantidadVenta()
+        {
+            using (ServicioVenta comp = new ServicioVenta())
+            {
+
+                return comp.numeroVenta();
+
+
+            }
+
+        }
+
+        public DataTable cantidadVentaMes()
+        {
+            using (ServicioVenta comp = new ServicioVenta())
+            {
+
+                return comp.numeroVentaMes();
+
+
+            }
+
+        }
+        public DataTable cantidadVentaAnio()
+        {
+            using (ServicioVenta comp = new ServicioVenta())
+            {
+
+                return comp.numeroVentaAnio();
+
+
+            }
+
+        }
+
+        public DataTable productoSemana()
+        {
+            using (ServicioVenta comp = new ServicioVenta())
+            {
+
+                return comp.productoSemana();
+
+
+            }
+
+        }
+        public DataTable productoMes()
+        {
+            using (ServicioVenta comp = new ServicioVenta())
+            {
+
+                return comp.productoMes();
+
+
+            }
+
+        }
+        public DataTable productoAnio()
+        {
+            using (ServicioVenta comp = new ServicioVenta())
+            {
+
+                return comp.productoAnio();
+
+
+            }
+
+        }
+
 
 
     }

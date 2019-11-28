@@ -69,5 +69,112 @@ namespace Dana.CapaLogica.Servicio
 
             return miDataSet;
         }
+
+        public DataTable numeroVenta()
+        {
+            miComando = new MySqlCommand();
+            Console.WriteLine("GestorVenta");
+
+            //miComando.CommandText = "cantiddVentasDiario";
+
+
+
+            DataTable miDataSet = new DataTable();
+            this.abrirConexion();
+
+            miDataSet = this.seleccionarIn("cantiddVentasDiario");
+            this.cerrarConexion();
+
+            return miDataSet;
+        }
+
+        public DataTable numeroVentaMes()
+        {
+            miComando = new MySqlCommand();
+            Console.WriteLine("GestorVenta");
+
+            //miComando.CommandText = "cantiddVentasDiario";
+
+
+
+            DataTable miDataSet = new DataTable();
+            this.abrirConexion();
+
+            miDataSet = this.seleccionarIn("cantiddVentasUMes");
+            this.cerrarConexion();
+
+            return miDataSet;
+        }
+
+        public DataTable numeroVentaAnio()
+        {
+            miComando = new MySqlCommand();
+            Console.WriteLine("GestorVenta");
+
+            //miComando.CommandText = "cantiddVentasDiario";
+
+
+
+            DataTable miDataSet = new DataTable();
+            this.abrirConexion();
+
+            miDataSet = this.seleccionarIn("cantiddVentasUAnio");
+            this.cerrarConexion();
+
+            return miDataSet;
+        }
+        public DataTable productoSemana()
+        {
+            miComando = new MySqlCommand();
+            Console.WriteLine("GestorVenta");
+
+            //miComando.CommandText = "cantiddVentasDiario";
+
+
+
+            DataTable miDataSet = new DataTable();
+            this.abrirConexion();
+
+            miDataSet = this.seleccionarIn("productosVendidosSemana");
+            this.cerrarConexion();
+
+            return miDataSet;
+        }
+
+        public DataTable productoMes()
+        {
+            miComando = new MySqlCommand();
+            Console.WriteLine("GestorVenta");
+
+            //miComando.CommandText = "cantiddVentasDiario";
+
+
+
+            DataTable miDataSet = new DataTable();
+            this.abrirConexion();
+
+            miDataSet = this.seleccionarIn("productosVendidosMes");
+            this.cerrarConexion();
+
+            return miDataSet;
+        }
+        public DataTable productoAnio()
+        {
+            miComando = new MySqlCommand();
+            Console.WriteLine("GestorVenta");
+
+            //miComando.CommandText = "cantiddVentasDiario";
+
+
+
+            DataTable miDataSet = new DataTable();
+            this.abrirConexion();
+
+            miDataSet = this.seleccionarIn("productosVendidosAnio");
+            this.cerrarConexion();
+
+            return miDataSet;
+        }
+
     }
 }
