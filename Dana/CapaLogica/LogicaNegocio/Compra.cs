@@ -11,7 +11,7 @@ namespace Dana.CapaLogica.LogicaNegocio
         #region Atributos
         protected int id_Compra;
         protected int id_Producto;
-        protected DateTime fecha_Compra;
+        protected int cantidad_Compra;
         protected double precio_Compra;
 
 
@@ -19,19 +19,19 @@ namespace Dana.CapaLogica.LogicaNegocio
 
         #region Constructores
 
-        public Compra(int Pid_Producto, DateTime Pfecha_Compra, double Pprecio_Compra)
+        public Compra(int Pid_Producto, int Pfecha_Compra, double Pprecio_Compra)
         {
             id_Compra = 0;
             id_Producto = Pid_Producto;
-            fecha_Compra = Pfecha_Compra;
+          cantidad_Compra = Pfecha_Compra;
             precio_Compra = Pprecio_Compra;
         }
 
-        public Compra(int Pid_Compra, int Pid_Producto, DateTime Pfecha_Compra, double Pprecio_Compra)
+        public Compra(int Pid_Compra, int Pid_Producto, int Pfecha_Compra, double Pprecio_Compra)
         {
             id_Compra = Pid_Compra;
             id_Producto = Pid_Producto;
-            fecha_Compra = Pfecha_Compra;
+       cantidad_Compra = Pfecha_Compra;
             precio_Compra = Pprecio_Compra;
         }
         #endregion
@@ -39,7 +39,7 @@ namespace Dana.CapaLogica.LogicaNegocio
         #region Get´s y Set´s
         public int Id_Compra { get => id_Compra; set => id_Compra = value; }
         public int Id_Producto { get => id_Producto; set => id_Producto = value; }
-        public DateTime Fecha_Compra { get => fecha_Compra; set => fecha_Compra = value; }
+        public int Cantidad_Compra { get => cantidad_Compra; set => cantidad_Compra = value; }
         public double Precio_Compra { get => precio_Compra; set => precio_Compra = value; }
         #endregion
     }

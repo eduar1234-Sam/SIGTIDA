@@ -48,5 +48,10 @@ namespace capaPresentacionn
             cargarGrid();
 
         }
+
+        private void Clientes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

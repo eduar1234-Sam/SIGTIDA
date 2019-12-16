@@ -139,7 +139,7 @@
             this.facturarCompra.Name = "facturarCompra";
             this.facturarCompra.Size = new System.Drawing.Size(75, 23);
             this.facturarCompra.TabIndex = 10;
-            this.facturarCompra.Text = "Facturar";
+            this.facturarCompra.Text = "Total";
             this.facturarCompra.UseVisualStyleBackColor = true;
             this.facturarCompra.Click += new System.EventHandler(this.FacturarCompra_Click);
             // 

@@ -50,6 +50,9 @@
     <Compile Include="LogicaNegocio\Producto.cs" />
     <Compile Include="LogicaNegocio\Venta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicio\GestorCompras.cs" />
+    <Compile Include="Servicio\GestorInventario.cs" />
+    <Compile Include="Servicio\GestorProductos.cs" />
     <Compile Include="Servicio\ServicioCliente.cs" />
     <Compile Include="Servicio\ServicioCompra.cs" />
     <Compile Include="Servicio\ServicioDetalle.cs" />

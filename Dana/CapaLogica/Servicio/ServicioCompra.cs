@@ -34,14 +34,17 @@ namespace Dana.CapaLogica.Servicio
 
             miComando.CommandText = "IngresarCompra";
 
-            miComando.Parameters.Add("@id_Producto", MySqlDbType.VarChar);
-            miComando.Parameters["@id_Producto"].Value = laCompra.Id_Compra;
+            miComando.Parameters.Add("@idComp", MySqlDbType.VarChar);
+            miComando.Parameters["@idComp"].Value = laCompra.Id_Compra;
 
-            miComando.Parameters.Add("@fecha_Compra", MySqlDbType.Date);
-            miComando.Parameters["@fecha_Compra"].Value = laCompra.Fecha_Compra;
+            miComando.Parameters.Add("@id_Prod", MySqlDbType.VarChar);
+            miComando.Parameters["@id_Prod"].Value = laCompra.Id_Producto;
 
-            miComando.Parameters.Add("@precio_Compra", MySqlDbType.Double);
-            miComando.Parameters["@precio_Compra"].Value = laCompra.Precio_Compra;
+            miComando.Parameters.Add("@cant", MySqlDbType.VarChar);
+            miComando.Parameters["@cant"].Value = laCompra.Cantidad_Compra;
+
+            miComando.Parameters.Add("@precComp", MySqlDbType.Double);
+            miComando.Parameters["@precComp"].Value = laCompra.Precio_Compra;
 
             respuesta = this.ejecutarSentencia(miComando);
             if (respuesta == "")
@@ -65,9 +68,7 @@ namespace Dana.CapaLogica.Servicio
 
             miComando.Parameters.Add("@id_Producto", MySqlDbType.VarChar);
             miComando.Parameters["@id_Producto"].Value = laCompra.Id_Producto;
-
-            miComando.Parameters.Add("@fecha_Compra", MySqlDbType.Date);
-            miComando.Parameters["@fecha_Compra"].Value = laCompra.Fecha_Compra;
+            
 
             miComando.Parameters.Add("@precio_Compra", MySqlDbType.Double);
             miComando.Parameters["@precio_Compra"].Value = laCompra.Precio_Compra;
@@ -100,6 +101,28 @@ namespace Dana.CapaLogica.Servicio
             this.cerrarConexion();
 
             return miDataSet;
+        }
+
+        public DataTable ListarCompra()
+        {
+
+
+            miComando = new MySqlCommand();
+            Console.WriteLine("Gestor Listar Compra");
+
+            miComando.CommandText = "ListarCompra";
+
+
+            DataSet miDataSet = new DataSet();
+            this.abrirConexion();
+
+
+            miDataSet = this.seleccionarInformacion(miComando);
+            DataTable miTablaDatos = miDataSet.Tables[0];
+
+            this.cerrarConexion();
+
+            return miTablaDatos;
         }
     }
 }

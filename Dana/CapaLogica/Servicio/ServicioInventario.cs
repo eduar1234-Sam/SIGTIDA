@@ -32,12 +32,12 @@ namespace Dana.CapaLogica.Servicio
             miComando = new MySqlCommand();
             Console.WriteLine("GestorInventario");
 
-            miComando.CommandText = "IngresarDetalle";
+            miComando.CommandText = "IngresarInventario";
 
             miComando.Parameters.Add("@idP", MySqlDbType.Int32);
             miComando.Parameters["@idP"].Value = elInventario.Id_Producto;
 
-            miComando.Parameters.Add("@cant", MySqlDbType.VarChar);
+            miComando.Parameters.Add("@cant", MySqlDbType.Int32);
             miComando.Parameters["@cant"].Value = elInventario.Cantidad_Producto;
 
 
@@ -54,5 +54,26 @@ namespace Dana.CapaLogica.Servicio
             return respuesta;
         }
 
+        public DataTable ListarInventario()
+        {
+
+
+            miComando = new MySqlCommand();
+            Console.WriteLine("Gestor Listar Inventario");
+
+            miComando.CommandText = "ListarInventario";
+
+
+            DataSet miDataSet = new DataSet();
+            this.abrirConexion();
+
+
+            miDataSet = this.seleccionarInformacion(miComando);
+            DataTable miTablaDatos = miDataSet.Tables[0];
+
+            this.cerrarConexion();
+
+            return miTablaDatos;
+        }
     }
 }

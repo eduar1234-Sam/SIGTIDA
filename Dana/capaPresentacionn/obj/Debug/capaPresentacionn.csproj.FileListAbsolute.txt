@@ -18,6 +18,11 @@ C:\Users\Eduardo\Documents\GitHub\InfoRed\SIGTIDA\Dana\capaPresentacionn\obj\Deb
 C:\Users\Eduardo\Documents\GitHub\InfoRed\SIGTIDA\Dana\capaPresentacionn\obj\Debug\capaPresentacionn.csproj.CopyComplete
 C:\Users\Eduardo\Documents\GitHub\InfoRed\SIGTIDA\Dana\capaPresentacionn\obj\Debug\capaPresentacionn.exe
 C:\Users\Eduardo\Documents\GitHub\InfoRed\SIGTIDA\Dana\capaPresentacionn\obj\Debug\capaPresentacionn.pdb
-C:\Users\Eduardo\Documents\GitHub\InfoRed\SIGTIDA\Dana\capaPresentacionn\obj\Debug\capaPresentacionn.Ventas.resources
 C:\Users\Eduardo\Documents\GitHub\InfoRed\SIGTIDA\Dana\capaPresentacionn\obj\Debug\capaPresentacionn.Graficos.resources
+C:\Users\Eduardo\Documents\GitHub\InfoRed\SIGTIDA\Dana\capaPresentacionn\obj\Debug\capaPresentacionn.Ventas.resources
 C:\Users\Eduardo\Documents\GitHub\InfoRed\SIGTIDA\Dana\capaPresentacionn\obj\Debug\capaPresentacionn.Clientes.resources
+C:\Users\Eduardo\Documents\GitHub\InfoRed\SIGTIDA\Dana\capaPresentacionn\obj\Debug\capaPresentacionn.Compras.resources
+C:\Users\Eduardo\Documents\GitHub\InfoRed\SIGTIDA\Dana\capaPresentacionn\obj\Debug\capaPresentacionn.Inventario.resources
+C:\Users\Eduardo\Documents\GitHub\InfoRed\SIGTIDA\Dana\capaPresentacionn\obj\Debug\capaPresentacionn.Producto.resources
+C:\Users\Eduardo\Documents\GitHub\InfoRed\SIGTIDA\Dana\capaPresentacionn\obj\Debug\capaPresentacionn.Productos.resources
+C:\Users\Eduardo\Documents\GitHub\InfoRed\SIGTIDA\Dana\capaPresentacionn\obj\Debug\capaPresentacionn.Menus.resources
